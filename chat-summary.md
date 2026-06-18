@@ -7,6 +7,7 @@
 ```text
 praktika/
   basic1/
+  todo_app/
   basic4/
   basic5/
   chat-summary.md
@@ -34,6 +35,44 @@ praktika/
 - пример структуры проекта на `archtool` + `web_fractal`.
 
 Статус: документ подготовлен, можно отправлять руководителю или переносить в Google Docs/PDF.
+
+## BASIC-2 - ToDo API на archtool + web_fractal
+
+Задача: создать работающий мини-проект ToDo API на `archtool`, `web_fractal`, FastAPI и async SQLAlchemy.
+
+Проект лежит в папке `todo_app`.
+
+Реализовано:
+
+- bounded context `users`: создание и получение пользователя;
+- bounded context `todos`: создание, список задач пользователя, отметка задачи выполненной;
+- `DependencyInjector` с передачей всех 4 дефолтных слоев;
+- зависимости через классовые аннотации без параметров `__init__`;
+- кросс-модульная зависимость `TodoService -> UserServiceABC`;
+- репозитории используют `UnitOfWork`;
+- `session_maker` регистрируется через `injector.register()`;
+- контроллеры наследуют `HttpControllerABC`;
+- используются `import_all_models()` и `initialize_controllers_api()`;
+- приложение запускается через `uvicorn`;
+- README содержит инструкцию запуска и curl-примеры.
+
+Команды проверки:
+
+```powershell
+cd todo_app
+.\check.ps1
+```
+
+Команда запуска сервера из Windows PowerShell:
+
+```powershell
+cd todo_app
+.\run.ps1
+```
+
+Проверка пройдена: все 5 эндпоинтов ответили успешно.
+
+Статус: проект готов локально. Для сдачи осталось опубликовать папку `todo_app` в публичный GitHub-репозиторий и отправить ссылку руководителю.
 
 ## BASIC-4 - ООП и SOLID в Python
 
