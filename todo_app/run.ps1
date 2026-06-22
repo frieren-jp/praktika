@@ -1,7 +1,12 @@
 $ErrorActionPreference = "Stop"
 
-$ProjectDir = Split-Path -Parent $MyInvocation.MyCommand.Path
-$WslProjectDir = "/mnt/c/Users/freezemyself/Desktop/praktika/todo_app"
+$ProjectDir = (Resolve-Path (Split-Path -Parent $MyInvocation.MyCommand.Path)).Path
+if ($ProjectDir -notmatch "^([A-Za-z]):\\(.*)$") {
+    throw "Cannot convert Windows path to WSL path: $ProjectDir"
+}
+$Drive = $Matches[1].ToLower()
+$Rest = $Matches[2] -replace "\\", "/"
+$WslProjectDir = "/mnt/$Drive/$Rest"
 
 Write-Host "Starting BASIC-2 ToDo API..."
 Write-Host "Project: $ProjectDir"
