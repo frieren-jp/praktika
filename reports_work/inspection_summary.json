@@ -1,0 +1,33 @@
+{
+  "docs": [
+    {
+      "name": "PM11_ideal",
+      "paragraphs": 153,
+      "tables": 9,
+      "images": 1,
+      "structure": "C:\\Users\\freezemyself\\Desktop\\praktika\\reports_work\\inspection\\PM11_ideal_structure.txt",
+      "image_dir": "C:\\Users\\freezemyself\\Desktop\\praktika\\reports_work\\extracted_images\\PM11_ideal"
+    },
+    {
+      "name": "PM02_UP_ideal",
+      "paragraphs": 175,
+      "tables": 9,
+      "images": 1,
+      "structure": "C:\\Users\\freezemyself\\Desktop\\praktika\\reports_work\\inspection\\PM02_UP_ideal_structure.txt",
+      "image_dir": "C:\\Users\\freezemyself\\Desktop\\praktika\\reports_work\\extracted_images\\PM02_UP_ideal"
+    },
+    {
+      "name": "PM02_PP_template",
+      "paragraphs": 150,
+      "tables": 10,
+      "images": 0,
+      "structure": "C:\\Users\\freezemyself\\Desktop\\praktika\\reports_work\\inspection\\PM02_PP_template_structure.txt",
+      "image_dir": "C:\\Users\\freezemyself\\Desktop\\praktika\\reports_work\\extracted_images\\PM02_PP_template"
+    }
+  ],
+  "pdf": {
+    "path": "C:\\Users\\freezemyself\\Desktop\\praktika\\reports_work\\instruction_PM02_PP.pdf",
+    "pages": 17,
+    "text_file": "C:\\Users\\freezemyself\\Desktop\\praktika\\reports_work\\inspection\\instruction_text.txt"
+  }
+}
